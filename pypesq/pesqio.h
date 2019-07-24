@@ -205,7 +205,7 @@ void load_src( long * Error_Flag, char ** Error_Type,
     float *read_ptr;
     
     float *input_data;
-    
+    float * input_data_copy;
     // short *p_input;
     // char s;
     // char *p_byte;
@@ -364,7 +364,7 @@ void load_src( long * Error_Flag, char ** Error_Type,
     }
      */
     read_count = Nsamples;
-    float * input_data_copy = input_data;
+    input_data_copy = input_data;
     while( read_count > 0 ){
         read_count--;
         *(read_ptr++) = (float)(*(input_data_copy++));
